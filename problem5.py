@@ -1,25 +1,16 @@
-string = ("mohamed") #Please enter your string here
+a = input("Enter your first word : ")
+b = input("Enter your second word : ")
+if len(a)%2 == 0:
+    a_front = a[0:(len(a)//2)]
+    a_back = a[(len(a)//2):len(a)+1]
+else:
+    a_front = a[0:(len(a) // 2)+1]
+    a_back = a[(len(a) // 2)+1:len(a)]
+if len(b)%2 == 0:
+    b_front = b[0:(len(b)//2)]
+    b_back = b[(len(b)//2):len(b)+1]
+else:
+    b_front = b[0:(len(b) // 2)+1]
+    b_back = b[(len(b) // 2)+1:len(b)]
 
-def split_str(string):
-    str_len = len(string)
-    
-    if str_len % 2 == 0 :
-        half = str_len / 2
-        i = 0
-        for c in range(len(string)):
-            if i % half == 0:
-              print('')
-              print(string[c])
-              i += 1
-                
-    else:
-        half = str_len / 2
-        first_half = round(half)
-        i = 0
-        for c in range(len(string)) :
-            if i % first_half == 0 :
-              print('')
-            print(string[c])
-            i += 1
-
-split_str(string)
+print((a_front+b_front) + (a_back+b_back))
